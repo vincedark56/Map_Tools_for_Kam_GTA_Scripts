@@ -7,6 +7,10 @@ This script basically takes the name of the of the GIMS V material specially **E
 
 It should be sufficient to make mush faster conversions.
 
+## Do not place in scripts/Startup forlder of 3ds Max
+
+A problem maybe caused by loading order the script don't work and max gives an error by undefined function.
+
 ## Compatibility:
 
 Tested:
