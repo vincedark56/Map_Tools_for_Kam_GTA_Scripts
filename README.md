@@ -1,3 +1,5 @@
+
+
 # Map Tools for Kam's GTA Scripts
 
 It should be sufficient to make mush faster conversions from GTA IV+ RAGE Games to 3D Renderware Era.
@@ -19,6 +21,7 @@ Note: The indentification of **ap1_01_** will be missed, but you can fix it by c
 ## Multiobject Prop Generator - Prop generator for Kam's map IO
 
 With this spript you have just to press the button that generate Gbuffer IDs in the scene and choose the first start ID and the .TXD name (you can apply different .TXD names for selected objects without have issues with ID).
+Now you can generate with the LOD custon values for selected objects.
 
 ## Rename Objects Names - Renames big GTA RAGE IV+ object names
 
@@ -29,12 +32,13 @@ This script is needed for GTA IV+ from RAGE Engine Games (or any game) to GTA Re
 Tested:
 
 * 3ds Max 2009 (32 and 64 bits)
+* 3ds Max 2012
+* 3ds Max 2013 - Design
 
 Should work:
 
-* 3ds Max 2018
-* 3ds Max 2017
-* 3ds Max 2016
-* 3ds Max 2015
 * 3ds Max 2014
-* 3ds Max 2013
+* 3ds Max 2015
+* 3ds Max 2016
+* 3ds Max 2017
+* 3ds Max 2018
