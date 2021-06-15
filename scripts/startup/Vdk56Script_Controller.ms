@@ -8,6 +8,8 @@ utility Vdk56_Tools_for_Kam "Vdk56 Tools for Kam" (
 	group "Tools"
 	(
 		button exp_mtex_list "Export Missing Tex List"
+		button prt_exd_objs_names "Print Exceed Names of Objs"
+		button prt_excd_dimensions "Print Exceed Dimensions"
 	)
 	group ""
 	(
@@ -32,6 +34,16 @@ utility Vdk56_Tools_for_Kam "Vdk56 Tools for Kam" (
 	(
 		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Tex_List_Export.ms") quiet:true   )
 		catch messagebox "Please re-install my Rename Export Missing Tex List script!" title:"Export Missing Tex List"
+	)
+	on prt_exd_objs_names pressed do
+	(
+		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Print_Exceed_Names_Of_Objs.ms") quiet:true   )
+		catch messagebox "Please re-install my Print Exceed Names Of Objs script!" title:"Print Exceed Names Of Objs"
+	)
+	on prt_excd_dimensions pressed do
+	(
+		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Print_Exceed_Dimensions.ms") quiet:true   )
+		catch messagebox "Please re-install my Print Exceed Dimensions script!" title:"Print Exceed Dimensions"
 	)
 	on about_btn pressed do
 	(
