@@ -1,49 +1,49 @@
 utility Vdk56_Tools_for_Kam "Vdk56 Tools for Kam" (
 	group "Main"
 	(
-		button gimsv_to_kam_btn "GIMSV to Kam Material" width:140 align:#center
-		button mltobjpropgen_btn "Multiobject Prop Generator" width:140 align:#center
-		button ren_obj_names_btn "Rename Objects Names" width:140 align:#center
+		button mat_to_kam_btn "Convert to Kam Material" width:180 align:#center
+		button mltobjpropgen_btn "Multiobject Prop Generator" width:180 align:#center
+		button obj_name_tool_btn "Object Name Tool" width:180 align:#center
 	)
 	group "Tools"
 	(
-		button exp_mtex_list "Export Missing Tex List"
-		button prt_exd_objs_names "Print Exceed Names of Objs"
-		button prt_excd_dimensions "Print Exceed Dimensions"
+		button exp_mtex_list_btn "Export Missing Tex List" width:180 align:#center
+		button prt_excd_dimensions_btn "Print Exceed Dimensions" width:180 align:#center
+		button iv_hierarch_obj_wtd_btn "IV Hierarch OBJ by WTD" width:180 align:#center
 	)
 	group ""
 	(
-		button about_btn "About" width:140 align:#center
+		button about_btn "About" width:180 align:#center
 	)
-	on gimsv_to_kam_btn pressed do
+	on mat_to_kam_btn pressed do
 	(
-		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\GIMSV_to_Kam_mat.ms") quiet:true   )
-		catch messagebox "Please re-install myGIMSV to Kam Material script script!" title:"GIMSV to Kam Material script"
+		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Conv_Mat_to_Kam.ms") quiet:true   )
+		catch messagebox "Please re-install my Convert to Kam Material script!" title:"Convert to Kam Material script"
 	)
 	on mltobjpropgen_btn pressed do
 	(
 		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Multiobject_Prop_Generator.ms") quiet:true   )
-		catch messagebox "Please re-install my Multiobject Prop Generator!script" title:"Multiobject Prop Generator script"
+		catch messagebox "Please re-install my Multiobject Prop Generator script!" title:"Multiobject Prop Generator script"
 	)
-	on ren_obj_names_btn pressed do
+	on obj_name_tool_btn pressed do
 	(
-		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Rename_Objects_Names.ms") quiet:true   )
-		catch messagebox "Please re-install my Rename Objects Names script!" title:"Rename Objects Names script"
+		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Obj_Name_Tool.ms") quiet:true   )
+		catch messagebox "Please re-install my Object Names Tool script!" title:"Object Name Tool script"
 	)
-	on exp_mtex_list pressed do
+	on exp_mtex_list_btn pressed do
 	(
 		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Tex_List_Export.ms") quiet:true   )
 		catch messagebox "Please re-install my Rename Export Missing Tex List script!" title:"Export Missing Tex List"
 	)
-	on prt_exd_objs_names pressed do
-	(
-		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Print_Exceed_Names_Of_Objs.ms") quiet:true   )
-		catch messagebox "Please re-install my Print Exceed Names Of Objs script!" title:"Print Exceed Names Of Objs"
-	)
-	on prt_excd_dimensions pressed do
+	on prt_excd_dimensions_btn pressed do
 	(
 		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Print_Exceed_Dimensions.ms") quiet:true   )
 		catch messagebox "Please re-install my Print Exceed Dimensions script!" title:"Print Exceed Dimensions"
+	)
+	on iv_hierarch_obj_wtd_btn pressed do
+	(
+		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\IV_Hierarch_OBJ_by_WTD.ms") quiet:true   )
+		catch messagebox "Please re-install my About script!" title:"IV Hierarch OBJ by WTD"
 	)
 	on about_btn pressed do
 	(
