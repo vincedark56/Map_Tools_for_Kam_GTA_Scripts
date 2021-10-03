@@ -1,11 +1,11 @@
 (
 	rollout mltobj_prop_rollout "Multiobject Prop Generator"
 	(
-		groupBox grp2 "Copy selected objs parent name to TXD Name" pos:[8,96] width:240 height:88
+		groupBox grp2 "Copy selected obj parent name to TXD Name" pos:[8,96] width:240 height:88
 		checkbox remFirst "Remove First:" pos:[16,112] width:88 height:16
-		button gen_gbuffer "Generate Gbuffer" pos:[104,32] width:136 height:32 toolTip:"For all objects in scene"
-		label lbl1 "Generate IDs for each object in scene for Start ID" pos:[16,24] width:80 height:64
-		groupBox grp3 "Important" pos:[8,8] width:240 height:80
+		button gen_gbuffer "Generate Gbuffer IDs" pos:[104,32] width:136 height:32 toolTip:"For all objects in scene"
+		label lbl1 "Objects will be renamed to lowercase" pos:[16,24] width:80 height:64
+		groupBox grp3 "Important!" pos:[8,8] width:240 height:80
 		button copyObjName "Copy Name" pos:[16,160] width:224 height:16
 		spinner remove_first_spn "" pos:[104,112] width:40 height:16 range:[0,25,0] type:#integer
 		spinner remove_last_spn "" pos:[104,136] width:40 height:16 range:[0,25,0] type:#integer
@@ -18,7 +18,21 @@
 		button generate "Generate (for selected objects)" pos:[8,264] width:240 height:64
 		on gen_gbuffer pressed do
 		(
-			for i = 1 to geometry.count do geometry[i].gbufferChannel = i
+			local objArr = #()
+			local objNameArr = #()
+			for o in geometry do
+			(
+				o.name = toLower o.name
+				objName = o.name
+				append objArr o
+				appendIfUnique objNameArr objName
+			)
+
+			for i = 1 to objArr.count do
+			(
+				objFindName = findItem objNameArr objArr[i].name
+				objArr[i].gbufferChannel = objFindName
+			)
 		)
 		on copyObjName pressed do
 		(
