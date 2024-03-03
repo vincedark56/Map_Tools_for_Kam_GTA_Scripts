@@ -1,19 +1,20 @@
 utility Vdk56_Tools_for_Kam "Vdk56 Tools for Kam" (
 	group "Main"
 	(
-		button mat_to_kam_btn "Convert to Kam Material" width:180 align:#center
-		button mltobjpropgen_btn "Multiobject Prop Generator" width:180 align:#center
-		button obj_name_tool_btn "Object Name Tool" width:180 align:#center
+		button mat_to_kam_btn "Convert to Kam Material" width:140 align:#center
+		button mltobjpropgen_btn "Multiobject Prop Generator" width:140 align:#center
+		button obj_name_tool_btn "Object Name Tool" width:140 align:#center
 	)
 	group "Tools"
 	(
-		button exp_mtex_list_btn "Export Missing Tex List" width:180 align:#center
-		button prt_excd_dimensions_btn "Print Exceed Dimensions" width:180 align:#center
-		button iv_hierarch_obj_wtd_btn "IV Hierarch OBJ by WTD" width:180 align:#center
+		button exp_mtex_list_btn "Export Missing Tex List" width:140 align:#center
+		button prt_excd_dimensions_btn "Print Exceed Dimensions" width:140 align:#center
+		button iv_hierarch_obj_wtd_btn "IV Hierarch OBJ by WTD" width:140 align:#center
+		button tex_name_to_mat_name_btn "Tex name to mat name" width:140 align:#center
 	)
 	group ""
 	(
-		button about_btn "About" width:180 align:#center
+		button about_btn "About" width:140 align:#center
 	)
 	on mat_to_kam_btn pressed do
 	(
@@ -44,6 +45,11 @@ utility Vdk56_Tools_for_Kam "Vdk56 Tools for Kam" (
 	(
 		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\IV_Hierarch_OBJ_by_WTD.ms") quiet:true   )
 		catch messagebox "Please re-install my About script!" title:"IV Hierarch OBJ by WTD"
+	)
+	on tex_name_to_mat_name_btn pressed do
+	(
+		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\texture_name_to_mat_name.ms") quiet:true   )
+		catch messagebox "Please re-install my About script!" title:"Tex name to mat name"
 	)
 	on about_btn pressed do
 	(
