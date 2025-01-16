@@ -1,7 +1,8 @@
 utility Vdk56_Tools_for_Kam "Vdk56 Tools for Kam" (
 	group "Main"
 	(
-		button mat_to_kam_btn "Convert to Kam Material" width:140 align:#center
+		button mat_to_kam_new_btn "Convert to Kam Mat (New)" width:140 align:#center
+		button mat_to_kam_old_btn "Convert to Kam Mat (Old)" width:140 align:#center
 		button mltobjpropgen_btn "Multiobject Prop Generator" width:140 align:#center
 		button obj_name_tool_btn "Object Name Tool" width:140 align:#center
 	)
@@ -16,11 +17,17 @@ utility Vdk56_Tools_for_Kam "Vdk56 Tools for Kam" (
 	(
 		button about_btn "About" width:140 align:#center
 	)
-	on mat_to_kam_btn pressed do
+	on mat_to_kam_new_btn pressed do
 	(
-		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Conv_Mat_to_Kam.ms") quiet:true   )
+		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Conv_Mat_to_Kam_New.ms") quiet:true   )
 		catch messagebox "Please re-install my Convert to Kam Material script!" title:"Convert to Kam Material script"
 	)
+	on mat_to_kam_old_btn pressed do
+	(
+		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Conv_Mat_to_Kam_Old.ms") quiet:true   )
+		catch messagebox "Please re-install my Convert to Kam Material script!" title:"Convert to Kam Material script"
+	)
+
 	on mltobjpropgen_btn pressed do
 	(
 		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Multiobject_Prop_Generator.ms") quiet:true   )
