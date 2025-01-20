@@ -8,6 +8,7 @@ utility Vdk56_Tools_for_Kam "Vdk56 Tools for Kam" (
 	)
 	group "Tools"
 	(
+		button tex_list_ext_chngr "Change Tex Extension" width:140 align:#center
 		button exp_mtex_list_btn "Export Missing Tex List" width:140 align:#center
 		button prt_excd_dimensions_btn "Print Exceed Dimensions" width:140 align:#center
 		button iv_hierarch_obj_wtd_btn "IV Hierarch OBJ by WTD" width:140 align:#center
@@ -17,15 +18,20 @@ utility Vdk56_Tools_for_Kam "Vdk56 Tools for Kam" (
 	(
 		button about_btn "About" width:140 align:#center
 	)
+	on tex_list_ext_chngr pressed do
+	(
+		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\tex_ext_changer.ms") quiet:true   )
+		catch messagebox "Please re-install my Convert to Change Tex Extension script!" title:"Change Tex Extension script"
+	)
 	on mat_to_kam_new_btn pressed do
 	(
 		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Conv_Mat_to_Kam_New.ms") quiet:true   )
-		catch messagebox "Please re-install my Convert to Kam Material script!" title:"Convert to Kam Material script"
+		catch messagebox "Please re-install my Convert to Kam Material New script!" title:"Convert to Kam Material New script"
 	)
 	on mat_to_kam_old_btn pressed do
 	(
 		try ( fileIn (scriptspath+"\\Vdk56_Tools_for_Kam\\Conv_Mat_to_Kam_Old.ms") quiet:true   )
-		catch messagebox "Please re-install my Convert to Kam Material script!" title:"Convert to Kam Material script"
+		catch messagebox "Please re-install my Convert to Kam Material Old script!" title:"Convert to Kam Material Old script"
 	)
 
 	on mltobjpropgen_btn pressed do
